@@ -1,0 +1,1303 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ========================================
+   1. GLOBAL
+======================================== */
+
+:root {
+  font-family: Manrope, system-ui, sans-serif;
+  color: #f0eee9;
+  background: #111114;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(ellipse at 50% -20%, #30271f 0, transparent 52%),
+    #111114;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   2. MAIN LAYOUT
+======================================== */
+
+.app-shell {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 38px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ========================================
+   3. HEADER
+======================================== */
+
+.topbar {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff17;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 0;
+  color: #f3f0e9;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d5a36a;
+  color: #d5a36a;
+  font-size: 19px;
+}
+
+.brand-muted {
+  color: #8c8984;
+  font-weight: 500;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.local-label {
+  font: 10px 'DM Mono';
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.local-label i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8fb88c;
+  margin-right: 7px;
+}
+
+
+/* ========================================
+   4. BUTTONS
+======================================== */
+
+.primary {
+  border: 0;
+  background: #d5a36a;
+  color: #171513;
+  font-weight: 800;
+  padding: 13px 20px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.primary.small {
+  padding: 10px 15px;
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: #c5a17b;
+  font-size: 11px;
+  padding: 9px 0;
+}
+
+
+/* ========================================
+   5. HERO SECTION
+======================================== */
+
+.hero {
+  text-align: center;
+  padding: 85px 0 68px;
+  border-bottom: 1px solid #ffffff17;
+}
+
+.eyebrow {
+  font: 10px 'DM Mono';
+  letter-spacing: 2px;
+  color: #c99b69;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -4px;
+  margin: 23px 0 17px;
+}
+
+.hero h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: #d5a36a;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: 0 auto 26px;
+  color: #aaa9a5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hero-button {
+  padding: 15px 25px;
+}
+
+.privacy {
+  margin-top: 18px;
+  color: #777;
+  font: 10px 'DM Mono';
+}
+
+
+/* ========================================
+   6. LIBRARY
+======================================== */
+
+.library {
+  padding: 48px 0 75px;
+  flex: 1;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-head h2 {
+  font-size: 27px;
+  letter-spacing: -1px;
+  margin: 7px 0 0;
+}
+
+.section-head h2 span {
+  font: 11px 'DM Mono';
+  color: #c99b69;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+.search {
+  background: #1a1b1f;
+  border: 1px solid #33343a;
+  color: #eee;
+  padding: 11px 13px;
+  border-radius: 3px;
+  width: 240px;
+  outline: none;
+  font-size: 12px;
+}
+
+.notice {
+  padding: 11px 13px;
+  border: 1px solid #ffffff18;
+  background: #ffffff06;
+  color: #aaa;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 17px;
+}
+
+.series-card {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 15px;
+  background: #191a1e;
+  border: 1px solid #ffffff15;
+  padding: 13px;
+  min-width: 0;
+}
+
+.series-cover {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(145deg, #49372a, #171719 72%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  color: #d5a36a;
+}
+
+.series-cover:after {
+  content: '';
+  position: absolute;
+  inset: 13%;
+  border: 1px solid #d5a36a50;
+  transform: rotate(10deg);
+}
+
+.series-cover span {
+  font-size: 42px;
+  z-index: 1;
+}
+
+.series-cover small {
+  font: 7px 'DM Mono';
+  letter-spacing: 1px;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+.series-details {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.series-details > strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.series-details > span {
+  font: 9px 'DM Mono';
+  color: #858585;
+}
+
+.chapter-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  background: #222328;
+  border: 1px solid #ffffff0b;
+  color: #ddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 10px;
+  min-width: 0;
+}
+
+.chapter-row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chapter-row small {
+  color: #888;
+  white-space: nowrap;
+  font: 9px 'DM Mono';
+}
+
+.remove-series {
+  margin-top: auto;
+  align-self: flex-start;
+  border: 0;
+  background: none;
+  color: #987e73;
+  padding: 5px 0;
+  font-size: 9px;
+}
+
+.empty {
+  min-height: 210px;
+  border: 1px dashed #ffffff25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #888;
+}
+
+.empty-mark {
+  font-size: 32px;
+  color: #c99b69;
+}
+
+.empty strong {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.empty span {
+  font-size: 11px;
+}
+
+
+/* ========================================
+   7. FOOTER
+======================================== */
+
+.footer {
+  height: 62px;
+  border-top: 1px solid #ffffff17;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  font: 9px 'DM Mono';
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   8. READER HEADER
+======================================== */
+
+.reader {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 138px);
+}
+
+.reader-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #111114ed;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #ffffff18;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 0;
+}
+
+.reader-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+}
+
+.reader-heading strong {
+  font-size: 12px;
+}
+
+.reader-heading span {
+  font-size: 10px;
+  color: #888;
+}
+
+.reader-options {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reader-options button {
+  background: #202126;
+  border: 1px solid #ffffff16;
+  color: #aaa;
+  padding: 8px 10px;
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+.reader-options button.selected {
+  background: #d5a36a;
+  color: #171513;
+  border-color: #d5a36a;
+}
+
+.reader-options .direction-btn {
+  font: 9px 'DM Mono';
+}
+
+
+/* ========================================
+   9. VERTICAL SCROLL MODE
+======================================== */
+
+.scroll-reader {
+  padding: 14px 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.pdf-page,
+.archive-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.pdf-page canvas {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.archive-page img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 900px);
+  height: auto;
+  object-fit: contain;
+}
+
+.page-loading {
+  padding: 35px;
+  color: #777;
+  font-size: 11px;
+}
+
+.page-error {
+  color: #d98b7c;
+  padding: 20px;
+}
+
+.chapter-end {
+  text-align: center;
+  padding: 75px 15px 55px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.chapter-end > span {
+  font: 9px 'DM Mono';
+  letter-spacing: 2px;
+  color: #c99b69;
+}
+
+.chapter-end h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.chapter-end .text-button {
+  color: #999;
+}
+
+
+
+/* ========================================
+   10. SINGLE PAGE MODE
+======================================== */
+
+.page-reader {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding: 15px 0 65px;
+  touch-action: pan-y;
+  overflow: visible;
+}
+
+.page-counter {
+  font: 10px 'DM Mono';
+  color: #888;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.page-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Контейнер страницы */
+
+.page-content .pdf-page,
+.page-content .archive-page {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+
+/* PDF — масштабирование по ширине */
+
+.page-content .pdf-page canvas {
+  display: block;
+  width: min(100%, 900px) !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: none !important;
+}
+
+/* CBZ / ZIP — масштабирование по ширине */
+
+.page-content .archive-page img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+/* Навигация */
+
+.page-nav {
+  position: fixed;
+  inset: 50% 16px auto;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.page-nav button {
+  pointer-events: auto;
+  width: 42px;
+  height: 52px;
+  border: 1px solid #ffffff22;
+  background: #111c;
+  color: #eee;
+  font-size: 28px;
+  border-radius: 3px;
+}
+
+.reader-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111114ed;
+  border-top: 1px solid #ffffff18;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 12px;
+  z-index: 5;
+}
+
+.reader-bottom button {
+  border: 1px solid #ffffff20;
+  background: #202126;
+  color: #ddd;
+  padding: 10px 13px;
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+
+
+/* ========================================
+   11. MOBILE ADAPTATION
+======================================== */
+
+@media (max-width: 700px) {
+
+  .app-shell {
+    padding: 0 16px;
+  }
+
+  .topbar {
+    height: 65px;
+  }
+
+  .local-label {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 0 52px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .section-head {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .series-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .series-card {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .reader-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .reader-heading {
+    order: -1;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .reader-toolbar > .text-button {
+    order: 0;
+  }
+
+  .reader-options {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .reader-options button {
+    padding: 8px;
+  }
+
+  .page-nav {
+    inset: 50% 7px auto;
+  }
+
+  .page-nav button {
+    width: 34px;
+    height: 44px;
+  }
+
+  .footer {
+    font-size: 7px;
+    gap: 8px;
+  }
+
+  .footer span:last-child {
+    text-align: right;
+  }
+
+  .reader-bottom {
+    gap: 8px;
+  }
+
+  .reader-bottom button {
+    padding: 9px;
+    font-size: 9px;
+  }
+}
+
+
+/* ========================================
+   12. SMALL SCREENS
+======================================== */
+
+@media (max-width: 380px) {
+
+  .app-shell {
+    padding: 0 11px;
+  }
+
+  .reader-options {
+    gap: 3px;
+  }
+
+  .reader-options button {
+    padding: 7px 6px;
+    font-size: 9px;
+  }
+
+  .reader-bottom button {
+    padding: 8px 9px;
+  }
+
+}
+/* ===== MangaMix: импорт и навигация по главам ===== */
+
+.reader-toolbar {
+  flex-wrap: wrap;
+}
+
+.reader-chapter-navigation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.chapter-select {
+  width: min(230px, 24vw);
+  min-width: 120px;
+  padding: 9px 10px;
+  border: 1px solid #ffffff20;
+  border-radius: 3px;
+  background: #202126;
+  color: #eee;
+  font: 11px Manrope, sans-serif;
+  outline: none;
+}
+
+.chapter-step {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ffffff20;
+  border-radius: 3px;
+  background: #202126;
+  color: #eee;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.chapter-step:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.import-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: #000b;
+  backdrop-filter: blur(5px);
+}
+
+.import-dialog {
+  width: min(100%, 460px);
+  padding: 25px;
+  border: 1px solid #ffffff22;
+  border-radius: 8px;
+  background: #191a1e;
+  box-shadow: 0 24px 80px #0009;
+}
+
+.import-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.import-dialog-header h2 {
+  margin: 7px 0 0;
+  font-size: 23px;
+}
+
+.dialog-close {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ffffff20;
+  border-radius: 4px;
+  background: #222328;
+  color: #ddd;
+  font-size: 22px;
+}
+
+.import-mode-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.import-mode-switch button {
+  padding: 11px 8px;
+  border: 1px solid #ffffff20;
+  border-radius: 3px;
+  background: #222328;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.import-mode-switch button.selected {
+  border-color: #d5a36a;
+  background: #d5a36a;
+  color: #171513;
+}
+
+.import-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #ddd;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.import-field input,
+.import-field select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff25;
+  border-radius: 3px;
+  outline: none;
+  background: #111114;
+  color: #eee;
+  font: 12px Manrope, sans-serif;
+}
+
+.import-help {
+  margin: 17px 0;
+  color: #999;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.import-submit {
+  width: 100%;
+}
+
+.series-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.rename-series,
+.remove-series {
+  align-self: flex-start;
+  border: 0;
+  background: none;
+  padding: 5px 0;
+  font-size: 9px;
+}
+
+.rename-series {
+  color: #d5a36a;
+}
+
+.remove-series {
+  margin-top: 0;
+  color: #987e73;
+}
+
+@media (max-width: 900px) {
+  .reader-toolbar {
+    gap: 10px;
+  }
+
+  .reader-chapter-navigation {
+    order: 2;
+  }
+
+  .reader-options {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .chapter-select {
+    width: min(210px, 42vw);
+  }
+}
+
+@media (max-width: 700px) {
+  .reader-chapter-navigation {
+    order: 1;
+    width: 100%;
+  }
+
+  .chapter-select {
+    flex: 1;
+    width: auto;
+  }
+
+  .reader-options {
+    order: 2;
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .import-dialog {
+    padding: 19px;
+  }
+}
+
+
+/* ========================================
+   13. MANGAMIX MOBILE IMPROVEMENTS
+======================================== */
+
+html {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select,
+input {
+  touch-action: manipulation;
+}
+
+img,
+canvas {
+  max-width: 100%;
+}
+
+/* Планшеты */
+
+@media (max-width: 900px) {
+  .app-shell {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .series-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reader {
+    min-height: calc(100dvh - 100px);
+  }
+}
+
+/* Телефоны */
+
+@media (max-width: 700px) {
+  .app-shell {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .topbar {
+    height: 60px;
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 11px;
+    letter-spacing: 1px;
+    gap: 7px;
+  }
+
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .topbar-right {
+    gap: 6px;
+  }
+
+  .topbar-right .primary {
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 52px 5px 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 12vw, 58px);
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .library {
+    padding: 32px 0 45px;
+  }
+
+  .section-head h2 {
+    font-size: 23px;
+  }
+
+  .series-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .series-card {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 11px;
+    padding: 10px;
+  }
+
+  .series-cover span {
+    font-size: 32px;
+  }
+
+  .series-details > strong {
+    font-size: 12px;
+  }
+
+  .chapter-row {
+    padding: 10px 8px;
+    min-height: 38px;
+    font-size: 10px;
+  }
+
+  /* Панель читалки */
+
+  .reader {
+    min-height: calc(100dvh - 60px);
+  }
+
+  .reader-toolbar {
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    gap: 9px;
+  }
+
+  .reader-heading {
+    width: 100%;
+    order: -1;
+    text-align: center;
+  }
+
+  .reader-heading strong {
+    font-size: 12px;
+  }
+
+  .reader-heading span {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .reader-toolbar > .text-button {
+    font-size: 10px;
+  }
+
+  .reader-chapter-navigation {
+    display: flex;
+    width: 100%;
+    order: 1;
+    gap: 6px;
+  }
+
+  .chapter-step {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .chapter-select {
+    width: auto;
+    min-width: 0;
+    flex: 1;
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .reader-options {
+    display: flex;
+    width: 100%;
+    order: 2;
+    gap: 5px;
+  }
+
+  .reader-options button {
+    flex: 1;
+    min-height: 36px;
+    padding: 7px 5px;
+    font-size: 10px;
+  }
+
+  /* Режим ленты */
+
+  .scroll-reader {
+    padding-top: 8px;
+    gap: 5px;
+  }
+
+  .pdf-page,
+  .archive-page {
+    width: 100%;
+  }
+
+  .pdf-page canvas,
+  .archive-page img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Режим страниц */
+
+  .page-reader {
+    min-height: calc(100dvh - 180px);
+    padding: 10px 0 75px;
+  }
+
+  .page-content {
+    width: 100%;
+  }
+
+  .page-content .pdf-page,
+  .page-content .archive-page {
+    width: 100%;
+  }
+
+  .page-content .pdf-page canvas,
+  .page-content .archive-page img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .page-counter {
+    margin-bottom: 8px;
+  }
+
+  .page-nav {
+    inset: 50% 5px auto;
+  }
+
+  .page-nav button {
+    width: 36px;
+    height: 46px;
+    font-size: 25px;
+  }
+
+  /* Нижние кнопки */
+
+  .reader-bottom {
+    padding: 9px 10px;
+    padding-bottom: max(9px, env(safe-area-inset-bottom));
+    gap: 7px;
+  }
+
+  .reader-bottom button {
+    flex: 1;
+    min-height: 40px;
+    padding: 8px 5px;
+    font-size: 9px;
+  }
+
+  /* Окно импорта */
+
+  .import-backdrop {
+    padding: 12px;
+  }
+
+  .import-dialog {
+    width: 100%;
+    max-height: 90dvh;
+    overflow-y: auto;
+    padding: 17px;
+  }
+
+  .import-dialog-header h2 {
+    font-size: 20px;
+  }
+
+  .import-mode-switch button {
+    min-height: 42px;
+    font-size: 10px;
+  }
+
+  .import-submit {
+    min-height: 44px;
+  }
+
+  .footer {
+    height: auto;
+    min-height: 55px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    line-height: 1.5;
+  }
+}
+
+/* Очень маленькие телефоны */
+
+@media (max-width: 380px) {
+  .app-shell {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .brand {
+    font-size: 10px;
+  }
+
+  .reader-options button {
+    font-size: 9px;
+    padding: 6px 3px;
+  }
+
+  .reader-bottom button {
+    font-size: 8px;
+  }
+
+  .chapter-select {
+    font-size: 10px;
+  }
+}
+
+/* Учитываем вырезы и системные панели iPhone */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .app-shell {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
