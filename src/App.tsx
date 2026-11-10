@@ -1022,11 +1022,11 @@ const openChapter = async (series: LibraryItem, chapter: Chapter) => {
       ) : (
         <main>
           <section className="hero">
-            <div className="eyebrow">ТВОЯ КОЛЛЕКЦИЯ · ТВОИ ПРАВИЛА</div>
-            <h1>Читай мангу<br /><em>по-своему.</em></h1>
+            <div className="eyebrow">ЛОКАЛЬНАЯ ЧИТАЛКА</div>
+            <h1>Читай мангу<br /><em>прямо из устройства</em></h1>
             <p>
               Открой PDF, CBZ или ZIP и читай в удобном формате.
-              Файлы остаются на твоём устройстве — сайт их никуда не загружает.
+              Файлы остаются на твоём устройстве.
             </p>
             <button className="primary hero-button" onClick={openImportDialog} disabled={busy}>
               {busy ? 'Обработка файлов…' : '＋ Добавить мангу'}
