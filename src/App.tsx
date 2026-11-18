@@ -1091,7 +1091,7 @@ const openChapter = async (series: LibraryItem, chapter: Chapter) => {
               <div className="empty">
                 <div className="empty-mark">冊</div>
                 <strong>Библиотека пока пуста</strong>
-                <span>Добавь мангу, выбрав PDF / CBZ / ZIP файлы.</span>
+                <span>Добавь мангу, выбрав CBZ / ZIP файлы. PDF не рекомендуется</span>
               </div>
             )}
           </section>
